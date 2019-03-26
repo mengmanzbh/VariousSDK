@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("http://47.52.47.73:9004/DomesticHotel/hotel/destination/queryNew",
+    {
+      keywords:"重庆",
+      token:"N2hjaDgxZU45eGg4eWRvWlM2UGlMZEUxOHRaYVBOdjgwUVcwaDVvWFBoUzBKcVBoNDNJam5mMzB5dWpMaFV0Uw=="
+    },
+    function(data,status){
+      alert("数据：" + data + "\n状态：" + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>向页面发送 HTTP POST 请求，并获得返回的结果</button>
+
+</body>
+</html>
